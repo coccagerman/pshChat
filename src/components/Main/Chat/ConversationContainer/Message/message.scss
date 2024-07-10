@@ -1,0 +1,136 @@
+.message {
+    display: flex;
+    position: relative;
+    
+    .msg-container {
+        max-width: 32rem;
+        padding: 1.5rem 0;
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            width: 3.5rem;
+            position: absolute;
+        }
+    
+        .msg-content-container {
+            position: relative;
+            max-width: 30rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            box-shadow: 10px 10px 14px -11px rgba(0,0,0,0.75);
+    
+            .msg-content {
+                font-size: 1.5rem;
+                color: #919191;
+            }
+    
+            .talker-indicator {
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                top: 0;
+            }
+        }
+    
+        .msg-time {
+            position: absolute;
+            color: #919191;
+            font-size: .85rem;
+            top: .5rem;
+        }
+    }
+}
+
+.received {
+    justify-content: flex-start;
+    .msg-container {
+        .msg-content-container {
+            margin-left: 6rem;
+            background-color: white;
+    
+            .talker-indicator {
+                left: -1.5rem;
+                border-width: 0 35px 20px 0;
+                border-color: transparent white transparent transparent;
+            }
+        }
+    
+        .msg-time {
+            right: .75rem;
+        }
+    }
+}
+
+.sent {
+    justify-content: flex-end;
+    .msg-container {
+        img {
+            right: 0;
+        }
+    
+        .msg-content-container {
+            margin-right: 6rem;
+            background-color: #fceded;
+    
+            .talker-indicator {
+                right: -1.5rem;
+                border-width: 20px 35px 0 0;
+                border-color: #fceded transparent transparent transparent;
+            }
+        }
+    
+        .msg-time {
+            left: .75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .message {
+        .msg-container {
+            max-width: 15rem;
+            padding: 1rem 0;
+
+            img {
+                width: 3rem;
+            }
+        
+            .msg-content-container {
+                max-width: 15rem;
+                padding: .75rem;
+        
+                .msg-content {
+                    font-size: .9rem;
+                }
+            }
+        
+            .msg-time {
+                position: absolute;
+                color: #919191;
+                font-size: .85rem;
+                top: .35rem;
+            }
+        }
+    }
+
+    .received {
+        .msg-container {
+            .msg-content-container {
+                margin-top: .5rem;
+                margin-left: 5rem;
+            }
+        }
+    }
+    
+    .sent {
+        justify-content: flex-end;
+        .msg-container {        
+            .msg-content-container {
+                margin-top: .5rem;
+                margin-right: 5rem;
+            }
+        }
+    }
+}

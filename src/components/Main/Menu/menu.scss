@@ -1,0 +1,64 @@
+.menu {
+    width: 30%;
+    height: 100vh;
+    background-color: #191a1e;
+
+
+    button {
+        background-color: #191a1e;
+        color: #b2b2b2;
+        border: none;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem auto 0 auto;
+        padding: 0 .5rem 0 .5rem;
+        border-radius: .35rem;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            background-color: #3c3d3f;
+        }
+
+        span {
+            font-size: 2.75rem;
+            margin-right: .5rem;
+        }
+    }
+
+    .chatPreview-container {
+        height: 86vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .menu {
+        height: 101vh;
+
+        width: 20%;
+        transition: .5s;
+
+        button {
+            padding: 0;
+            margin: 1rem auto;
+            span {
+                font-size: 3rem;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .menuActive {
+        position: absolute;
+        width: 100%;
+        transition: .5s;
+        z-index: 2;
+    }
+}

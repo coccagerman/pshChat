@@ -1,0 +1,83 @@
+.chatPreview {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border: #6d6d6e solid;
+    border-width: 1.5px 0;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background-color: #3c3d3f;
+        border-right: #ff0000 3px solid;
+    }
+
+    img {
+        width: 4rem;
+        border-radius: 50%;
+        margin-left: 2rem;
+    }
+
+    .previewDetails {
+        margin-left: 1rem;
+        width: 100%;
+        position: relative;
+
+        p {
+            color: #909090;
+        }
+
+        .nameAndDate {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                color: white;
+            }
+
+            .msg-date {
+                font-size: .75rem;
+                margin-right: .5rem;
+            }
+        }
+        
+        .msg-content {
+            font-size: .9rem;
+            margin-top: .5rem;
+            max-width: 70%;
+        }
+
+        .delete-btn {
+            position: relative;
+            font-size: .85rem;
+            background-color: #CCC;
+            top: 1rem;
+            right: 1rem;
+            padding: 1rem;
+            z-index: 4;
+
+            &:hover {
+                background-color: red;
+            }
+        }
+
+    }
+}
+
+.active {
+    background-color: #3c3d3f;
+    border-right: #ff0000 3px solid;
+}
+
+@media screen and (max-width: 950px) {
+    .chatPreview {
+        justify-content: center;
+        max-height: 8rem;
+        padding: 1.5rem .5rem;
+
+        img {
+            width: 3.5rem;
+            margin-left: 0;
+        }
+    }
+}

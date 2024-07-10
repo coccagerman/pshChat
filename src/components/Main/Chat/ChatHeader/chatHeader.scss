@@ -1,0 +1,55 @@
+.chatHeader {
+    height: 10rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-top: 3rem;
+
+    img {
+        width: 6rem;
+        border-radius: 50%;
+        margin: 3rem 0 3rem 4rem;
+    }
+
+    .personDetails {
+        margin-left: 1.75rem;
+        max-width: 60%;
+
+        h1 {
+            font-size: 2rem;
+            color: #3c3d3f;
+        }
+
+        p {
+            color: #8f8f8f;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .chatHeader {
+        height: 6rem;
+
+        img {
+            width: 4rem;
+            margin: 3rem 0 3rem 1rem;
+        }
+
+        .personDetails {
+            margin-left: 1.25rem;
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
